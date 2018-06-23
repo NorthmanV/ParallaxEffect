@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		8725634B20DE4BEC0046D196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725634A20DE4BEC0046D196 /* AppDelegate.swift */; };
-		8725634D20DE4BEC0046D196 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725634C20DE4BEC0046D196 /* ViewController.swift */; };
 		8725635020DE4BEC0046D196 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8725634E20DE4BEC0046D196 /* Main.storyboard */; };
 		8725635220DE4BEE0046D196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8725635120DE4BEE0046D196 /* Assets.xcassets */; };
 		8725635520DE4BEE0046D196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8725635320DE4BEE0046D196 /* LaunchScreen.storyboard */; };
+		8725635D20DE4E090046D196 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725635C20DE4E090046D196 /* TableViewController.swift */; };
+		8725635F20DE53910046D196 /* ParallaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725635E20DE53910046D196 /* ParallaxTableView.swift */; };
+		8725636120DE59A90046D196 /* AdvancedParallaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725636020DE59A90046D196 /* AdvancedParallaxTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8725634720DE4BEC0046D196 /* ParallaxEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8725634A20DE4BEC0046D196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8725634C20DE4BEC0046D196 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8725634F20DE4BEC0046D196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8725635120DE4BEE0046D196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8725635420DE4BEE0046D196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8725635620DE4BEE0046D196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8725635C20DE4E090046D196 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		8725635E20DE53910046D196 /* ParallaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxTableView.swift; sourceTree = "<group>"; };
+		8725636020DE59A90046D196 /* AdvancedParallaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedParallaxTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				8725634A20DE4BEC0046D196 /* AppDelegate.swift */,
-				8725634C20DE4BEC0046D196 /* ViewController.swift */,
+				8725635C20DE4E090046D196 /* TableViewController.swift */,
+				8725635E20DE53910046D196 /* ParallaxTableView.swift */,
+				8725636020DE59A90046D196 /* AdvancedParallaxTableView.swift */,
 				8725634E20DE4BEC0046D196 /* Main.storyboard */,
 				8725635120DE4BEE0046D196 /* Assets.xcassets */,
 				8725635320DE4BEE0046D196 /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8725634D20DE4BEC0046D196 /* ViewController.swift in Sources */,
+				8725636120DE59A90046D196 /* AdvancedParallaxTableView.swift in Sources */,
 				8725634B20DE4BEC0046D196 /* AppDelegate.swift in Sources */,
+				8725635F20DE53910046D196 /* ParallaxTableView.swift in Sources */,
+				8725635D20DE4E090046D196 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

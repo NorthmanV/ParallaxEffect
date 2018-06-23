@@ -1,24 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pw1-Ik-pFS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Standart Parallax Effect-->
+        <scene sceneID="2x7-mc-ElF">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="0uA-gg-bdn" customClass="TableViewController" customModule="ParallaxEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zbg-jB-uOM" customClass="ParallaxTableView" customModule="ParallaxEffect" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="J0g-lg-5Yp">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-9d-Z3R">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="ApH-cs-sCC"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.54561004481219932" green="0.83397073513393394" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="JmM-9d-Z3R" secondAttribute="bottom" id="L00-lP-sJ6"/>
+                                <constraint firstAttribute="trailing" secondItem="JmM-9d-Z3R" secondAttribute="trailing" id="lUE-3m-ZV0"/>
+                                <constraint firstItem="JmM-9d-Z3R" firstAttribute="leading" secondItem="J0g-lg-5Yp" secondAttribute="leading" id="nLV-tk-ap7"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DummyCell" id="b9S-rG-7c8">
+                                <rect key="frame" x="0.0" y="228" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b9S-rG-7c8" id="diY-Ha-Dwd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0uA-gg-bdn" id="bEm-0U-NeU"/>
+                            <outlet property="delegate" destination="0uA-gg-bdn" id="LJH-WN-YD0"/>
+                            <outlet property="heightConstraint" destination="ApH-cs-sCC" id="Z8Y-9W-tai"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Standart Parallax Effect" id="wLo-V4-JDk">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="M0P-HF-qqf">
+                            <connections>
+                                <action selector="closeBarButtonTapped:" destination="0uA-gg-bdn" id="maF-Vg-ptg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLN-tO-RYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312.80000000000001" y="182.15892053973016"/>
+        </scene>
+        <!--Advanced Parallax Effect-->
+        <scene sceneID="8V5-bT-vSG">
+            <objects>
+                <tableViewController id="K7R-Hf-hd5" customClass="TableViewController" customModule="ParallaxEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H05-SH-tqB" customClass="AdvancedParallaxTableView" customModule="ParallaxEffect" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="ysV-gn-iMx">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="7kF-wH-jXC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" identifier="height" id="yKO-CM-yLN"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="7kF-wH-jXC" secondAttribute="bottom" identifier="bottom" id="MxS-Ml-cAn"/>
+                                <constraint firstAttribute="trailing" secondItem="7kF-wH-jXC" secondAttribute="trailing" id="hc4-nY-prN"/>
+                                <constraint firstItem="7kF-wH-jXC" firstAttribute="leading" secondItem="ysV-gn-iMx" secondAttribute="leading" id="mDV-TM-hGE"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="U2E-Pf-C60">
+                            <rect key="frame" x="0.0" y="272" width="375" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="Vv1-DH-5Md">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" identifier="heightFooter" id="kNc-ep-hM6"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Vv1-DH-5Md" secondAttribute="bottom" identifier="bottomFooter" id="B9z-XY-87u"/>
+                                <constraint firstItem="Vv1-DH-5Md" firstAttribute="leading" secondItem="U2E-Pf-C60" secondAttribute="leading" id="GTu-HG-fXX"/>
+                                <constraint firstAttribute="trailing" secondItem="Vv1-DH-5Md" secondAttribute="trailing" id="mYd-kH-9Gj"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DummyCell" id="FXJ-yO-vnX">
+                                <rect key="frame" x="0.0" y="228" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FXJ-yO-vnX" id="w6g-cA-7nh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="K7R-Hf-hd5" id="Dml-Nd-VI0"/>
+                            <outlet property="delegate" destination="K7R-Hf-hd5" id="lEI-sq-GLO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Advanced Parallax Effect" id="mZP-5x-wjp">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="nt5-gC-pqD">
+                            <connections>
+                                <action selector="closeBarButtonTapped:" destination="K7R-Hf-hd5" id="FFf-MJ-ctd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZB-Zv-BjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312.80000000000001" y="924.28785607196414"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dFA-bR-NnR">
+            <objects>
+                <navigationController id="eZr-K1-LS5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h0X-7d-ILh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="K7R-Hf-hd5" kind="relationship" relationship="rootViewController" id="r0K-HI-LgP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtj-GD-bUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-519" y="925"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dP6-QL-B3F">
+            <objects>
+                <viewController id="pw1-Ik-pFS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VDg-8w-bld">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4G-ni-fG2">
+                                <rect key="frame" x="93" y="250" width="190" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Standart parallax effect"/>
+                                <connections>
+                                    <segue destination="Tt7-EJ-dzQ" kind="show" id="Ruh-nU-P6G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSA-Yb-Cr2">
+                                <rect key="frame" x="88" y="295" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Advanced parallax effect"/>
+                                <connections>
+                                    <segue destination="eZr-K1-LS5" kind="show" id="Y8O-yE-9SW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LSA-Yb-Cr2" firstAttribute="top" secondItem="c4G-ni-fG2" secondAttribute="bottom" constant="11" id="BXt-yO-U5X"/>
+                            <constraint firstItem="c4G-ni-fG2" firstAttribute="top" secondItem="qxt-oL-1T8" secondAttribute="top" constant="230" id="HaE-rV-tIJ"/>
+                            <constraint firstItem="LSA-Yb-Cr2" firstAttribute="centerX" secondItem="VDg-8w-bld" secondAttribute="centerX" id="Hf3-J9-EL3"/>
+                            <constraint firstItem="c4G-ni-fG2" firstAttribute="centerX" secondItem="qxt-oL-1T8" secondAttribute="centerX" id="rN6-IC-Asy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qxt-oL-1T8"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZY5-ot-Jaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1349" y="177"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Qc-zf-l3x">
+            <objects>
+                <navigationController id="Tt7-EJ-dzQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hf7-h1-yuq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0uA-gg-bdn" kind="relationship" relationship="rootViewController" id="cHM-NZ-GQM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcZ-GJ-3rL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-519" y="183"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="footer" width="128" height="128"/>
+        <image name="header" width="1200" height="757"/>
+    </resources>
 </document>
