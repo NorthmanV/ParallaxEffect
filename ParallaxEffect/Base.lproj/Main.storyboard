@@ -94,18 +94,16 @@
                             <rect key="frame" x="0.0" y="272" width="375" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="Vv1-DH-5Md">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="Vv1-DH-5Md">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="100" identifier="heightFooter" id="kNc-ep-hM6"/>
-                                    </constraints>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="Vv1-DH-5Md" secondAttribute="bottom" identifier="bottomFooter" id="B9z-XY-87u"/>
+                                <constraint firstItem="Vv1-DH-5Md" firstAttribute="top" secondItem="U2E-Pf-C60" secondAttribute="top" identifier="topFooter" id="AdR-xW-ECE"/>
                                 <constraint firstItem="Vv1-DH-5Md" firstAttribute="leading" secondItem="U2E-Pf-C60" secondAttribute="leading" id="GTu-HG-fXX"/>
                                 <constraint firstAttribute="trailing" secondItem="Vv1-DH-5Md" secondAttribute="trailing" id="mYd-kH-9Gj"/>
+                                <constraint firstAttribute="bottom" secondItem="Vv1-DH-5Md" secondAttribute="bottom" identifier="bottomFooter" id="z84-1H-N60"/>
                             </constraints>
                         </view>
                         <prototypes>

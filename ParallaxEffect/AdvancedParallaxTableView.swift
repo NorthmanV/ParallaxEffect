@@ -33,15 +33,14 @@ class AdvancedParallaxTableView: UITableView {
         
         //footer
         guard let footer = tableFooterView else { return }
-        if let imageView = footer.subviews.first as? UIImageView {
-            heightFooterConstraint = imageView.constraints.filter {$0.identifier == "heightFooter"}.first
-            bottomFooterConstraint = footer.constraints.filter {$0.identifier == "bottomFooter"}.first
-        }
+        heightFooterConstraint = footer.constraints.filter {$0.identifier == "topFooter"}.first
+        bottomFooterConstraint = footer.constraints.filter {$0.identifier == "bottomFooter"}.first
         let offsetFooter = -contentOffset.y
-        heightFooterConstraint?.constant = max(footer.bounds.height, footer.frame.height + offsetFooter)
-//        print(footer.bounds.height, self.frame.height - offsetFooter)
-        bottomFooterConstraint?.constant = offsetFooter >= 0 ? 0 : offsetFooter / 2
-        footer.clipsToBounds = offsetFooter <= 0
+        let offsetBottom = self.contentSize.height - UIScreen.main.nativeBounds.height - offsetFooter
+        print(offsetBottom)
+        heightFooterConstraint?.constant = offsetBottom >= 99 ? 0 : (-100 + offsetBottom) / 2
+        bottomFooterConstraint?.constant = offsetBottom <= 100 ? 0 : 100 - offsetBottom
+//        footer.clipsToBounds = offsetBottom < 100 ? true : false
         
     }
     
