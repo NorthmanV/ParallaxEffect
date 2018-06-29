@@ -103,7 +103,7 @@
                                 <constraint firstItem="Vv1-DH-5Md" firstAttribute="top" secondItem="U2E-Pf-C60" secondAttribute="top" identifier="topFooter" id="AdR-xW-ECE"/>
                                 <constraint firstItem="Vv1-DH-5Md" firstAttribute="leading" secondItem="U2E-Pf-C60" secondAttribute="leading" id="GTu-HG-fXX"/>
                                 <constraint firstAttribute="trailing" secondItem="Vv1-DH-5Md" secondAttribute="trailing" id="mYd-kH-9Gj"/>
-                                <constraint firstAttribute="bottom" secondItem="Vv1-DH-5Md" secondAttribute="bottom" identifier="bottomFooter" id="z84-1H-N60"/>
+                                <constraint firstAttribute="bottom" secondItem="Vv1-DH-5Md" secondAttribute="bottom" priority="999" identifier="bottomFooter" id="z84-1H-N60"/>
                             </constraints>
                         </view>
                         <prototypes>
